@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My App</title>
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-    <!--<link rel="stylesheet" href="https://use.typekit.net/tqu8lxi.css">-->
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <title>Fetch Weather Info!</title>
+  <link rel="stylesheet" type="text/css" href="./reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet"> 
+  <!--<link rel="stylesheet" href="https://use.typekit.net/tqu8lxi.css">-->
+  <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
-<p>“Life is not a problem to be solved, but a reality to be experienced.”</p>
+  <div class="sidenav">
+    <div id="controlbox">
+      <div class="radbtn">
+	<input type="radio" id="apiopt1" name="weather_data_srcapi" value="local">
+	<label for="apiopt1">Default API</label>
+      </div>
+      <div class="radbtn">
+	<input type="radio" id="apiopt2" name="weather_data_srcapi"
+	       value="openweathermap">
+	<label for="apiopt2">OpenWeatherMap API</label>
+      </div>
+      <input id="indate" type="text">
+      <input class="button"  id="submit" type="button" value="submit">
+    </div>
+  </div>
+  <div class="main">
+    <!-- <p>“Life is not a problem to be solved, but a reality to be experienced.</p> -->
+    <div id="chart_div"></div>
+    
+    <p id="log"></p>
+  </div>
 
-
-<div id="chart_div"></div>
-<input id="submit" type="button" value="submit">
-<p id="log"></p>
-<!--hello-->
-<!--<div class="sidenav">-->
-    <!--<p>Discover movies</p>-->
-    <!--<select id="genrelist" name="genres">-->
-        <!--\{\{!select_opts\}\}-->
-    <!--</select>-->
-    <!--<input id="yearbox" type="text" name="year" value="">-->
-    <!--<input type="image" id="submit" src="dot-arrow.png" width="40">-->
-<!--</div>-->
-<!--<div class="main">-->
-    <!--<div class="movielist">-->
-
-    <!--</div>-->
-<!--</div>-->
-<!--<script src="aja.js"></script>-->
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="myscript.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="./aja.js"></script>
+  <script src="./myscript.js"></script>
 </body>
 </html>
+

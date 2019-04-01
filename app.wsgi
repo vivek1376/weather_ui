@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+## -*- coding: utf-8 -*-
 
 import os
 import json
@@ -45,39 +46,23 @@ def fetch_weather_data_openweathermap_api():
 
     return weather_data
 
-        #
-        #
-        # diff_time = dt - curr_time
-        #
-        # print(diff_time)
-        #
-        # formatted_time = time.strftime('%Y-%m-%d %I:%M:%S %p', time.localtime(diff_time))
-        # print(formatted_time)
-
-        # print(str(item))
-
-    # weather_forecast_json = weather_forecast_resp.
-    # forecast_data = []
-    # current_date =
-
-@route('/<path:path>/<filename:re:.*\.css>')
-def send_static(path, filename):
+@route('/<filename:re:.*\.css>')
+def send_static(filename):
 
     return static_file(filename, root='css/')
 
 
-@route('/<path:path>/<filename:re:.*\.js>')
-def send_static(path, filename):
+@route('/<filename:re:.*\.js>')
+def send_static(filename):
 
     return static_file(filename, root='js/')
 
 
-@route('/weatherui')
-@route('/weatherui/')
+@route('/')
 def home():
-    with open('index.html', 'r') as myfile:
+    with open('index.html', mode='r', encoding='utf-8') as myfile:
         html_string = myfile.read()
-
+        
     return template(html_string) #, select_opts=get_select_opts_genre())
 
 
@@ -89,5 +74,6 @@ def getforecastdata2():
 
 # fetch_weather_data_openweathermap_api()
 
-run(reloader=True, debug=True)
+debug(mode=True)
+application = default_app()
 
