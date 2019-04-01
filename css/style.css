@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+div#wrapall {
+    margin-top: 3em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+div.sidenav {
+    height: 100%;
+    width: 300px;
+    padding: 1.5em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3c4d51;
+    overflow-x: hidden;
+    border-right: 2px solid #2b575d;
+}
+
+label {
+    color: white;
+    font-size: 18px;
+}
+
+div.radbtn {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+input#indate {
+    display: block;
+    margin-top: 2em;
+    width: 100%;
+    border-radius: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    border: 3px solid #98b1b7;
+    height: 42px;
+    padding: 4px;
+    font-family: inherit;
+    background-color: #dfecf0;
+    font-family: inherit;
+    font-weight: 700; 
+    color: #3d4448;
+    font-size: 20px;
+    
+}
+
+div.sidenav input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  -moz-opacity: 0;
+  -webkit-opacity: 0;
+  -o-opacity: 0;
+}
+
+div.sidenav input[type="radio"] + label {
+  position: relative;
+  padding: 0 0 0 24px;
+  font-size: 20px;
+  line-height: 25px;
+  margin:0 0 10px 0;
+}
+
+div.sidenav input[type="radio"] + label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  height: 18px;
+  width: 18px;
+  background: white;
+  border: 1px solid gray;
+  box-shadow: inset 0px 0px 0px 2px white;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+  -moz-box-shadow: inset 0px 0px 0px 2px white;
+  -o-box-shadow: inset 0px 0px 0px 2px white;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+div.sidenav input[type="radio"]:checked + label:before {
+  background: #ff3889;
+}
+
+.button {
+  background-color: #ad4068;
+  border: none;
+  color: white;
+  padding: 4px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+    font: inherit;
+    font-weight: bold;
+    color: #ffa3b7;
+    text-transform: uppercase;
+    float: right;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-top: 2px solid #e45589;
+    border-left: 2px solid #9b3a5d;
+    border-right: 2px solid #98385b;
+    border-bottom: 2px solid #411022;
+}
+
+div.main {
+    margin-left: 300px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
